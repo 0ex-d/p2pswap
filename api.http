@@ -1,0 +1,71 @@
+### Register User
+POST http://localhost:9911/register
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "password123"
+}
+
+###
+
+### Login User
+POST http://localhost:9911/login
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "password123"
+}
+
+###
+
+### Get User Details
+GET http://localhost:9911/user?id=596289ba-b3ea-4f6c-82f6-fe86bebdad58
+
+###
+
+### Add Bank Details
+POST http://localhost:9911/bank-details
+Content-Type: application/json
+
+{
+  "bank_name": "Revolut",
+  "account_number": "1234567890",
+  "sort_code": "1234567890",
+  "account_name": "John Doe"
+}
+
+###
+
+### Get Bank Details
+GET http://localhost:9911/bank-details?id=USER_ID
+
+###
+
+### Create Trade
+POST http://localhost:9911/trade
+Content-Type: application/json
+
+{
+  "user_id": "USER_ID",
+  "side": "sell",
+  "asset_id": "USDT",
+  "price": 1.25,
+  "amount": 100
+}
+
+###
+
+### Get User Trades
+GET http://localhost:9911/user-trades?id=USER_ID
+
+###
+
+### Get All Trades
+GET http://localhost:9911/trades
+
+###
+
+### Get Exchange Rate
+GET http://localhost:9911/exchange-rate?base=USDT&target=GBP

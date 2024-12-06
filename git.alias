@@ -1,0 +1,2 @@
+alias redis_start="redis-server --daemonize yes --port 6888"
+alias redis_shutdown="redis-cli -p 6888 shutdown"

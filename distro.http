@@ -1,0 +1,21 @@
+###
+
+### Lock Escrow
+POST http://localhost:9911/escrow/lock
+Content-Type: application/json
+
+{
+  "trade_id": "TRADE_ID",
+  "amount": 100,
+  "asset_id": "USDT"
+}
+
+###
+
+### Release Escrow
+POST http://localhost:9911/escrow/release?trade_id=TRADE_ID
+
+###
+
+### Get Exchange Rate
+GET http://localhost:9911/exchange-rate?base=USDT&target=GBP
